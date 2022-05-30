@@ -1,0 +1,52 @@
+.social-item a {
+  width: 23px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.respect-slider-star-social a {
+  width: 23px;
+  height: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.youtube {
+  background-image: url("../img/social/youtube.svg");
+}
+.youtube:hover {
+  background-image: url("../img/social/youtube-h.svg");
+}
+
+.facebook {
+  background-image: url("../img/social/facebook.svg");
+}
+.facebook:hover {
+  background-image: url("../img/social/facebook-h.svg");
+}
+
+.vk {
+  background-image: url("../img/social/vk.svg");
+}
+.vk:hover {
+  background-image: url("../img/social/vk-h.svg");
+}
+
+.tiktok {
+  background-image: url("../img/social/tiktok.svg");
+}
+
+.telegram {
+  background-image: url("../img/social/telegram.svg");
+}
+.telegram:hover {
+  background-image: url("../img/social/telegram-h.svg");
+}
+
+.instagram {
+  background-image: url("../img/social/instagram.svg");
+}
+.instagram:hover {
+  background-image: url("../img/social/instagram-h.svg");
+}

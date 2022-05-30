@@ -1,0 +1,702 @@
+// Fonts
+@import 'fonts', 'color'
+$font-section: 28 + px
+$font-big: 20 + px
+$font-regular: 18 + px
+$font-small: 16 + px
+@mixin sectionTitle()
+    font-size: $font-section
+    font-weight: 500
+    line-height: 36px
+    letter-spacing: 0.02em
+    
+
+@mixin fontBig()
+    font-size: $font-big
+    font-weight: 400
+    line-height: 30px
+    letter-spacing: 0.02em
+
+
+@mixin fontRegular()
+    font-size: $font-regular
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.02em
+
+@mixin fontSmall()
+    font-size: $font-small
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.02em 
+
+@media screen and ( max-width: 1200px )
+    .header
+        &-menu
+            &-item
+                a
+                    margin: 0px 10px  
+
+
+@media screen and ( max-width: 992px )   
+    
+    .header
+        padding: 15px 0
+        border-bottom: 1px solid #B9BECF
+        .container
+            position: relative
+        .logo
+            margin-bottom: 0
+            img
+                vertical-align: middle
+        &-name
+            display: none
+        &-menu
+            position: absolute
+            top: 41px
+            left: 0
+            padding: 10px 15px
+            flex-wrap: wrap
+            width: 100%
+            max-height: 0px
+            overflow: hidden
+            background-color: #fff
+            z-index: 99
+            transition: max-height .5s, easy-in-out
+
+            &-item
+                width: 100%
+                padding: 7px 15px
+                &:hover
+                    background-color: #E7EAF5
+            &-mob
+                position: relative
+                margin-left: 30px
+                width: 30px
+                height: 20px
+                display: inline-block
+                vertical-align: middle
+                span
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 2px
+                    background-color: #000
+                    transition: all .5s
+                    &:first-child
+                        top: 50%
+                    &:last-child
+                        top: 100%
+                &.active
+                    span
+                        transform: rotate(-45deg)
+                        top: 10px
+                        &:first-child,&:last-child
+                            transform: rotate(45deg)
+        &-call
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 35px
+            height: 35px
+            svg
+                width: 13px
+                height: 13px
+
+
+    .main
+        padding: 21px 0
+        .social
+            display: none
+        &-title
+            margin-bottom: 17px
+            font-size: 30px
+            font-weight: 500
+            line-height: 40px
+        &-desc
+            margin-bottom: 25px
+            @include fontBig()
+    .features
+        padding-top: 0
+        padding-bottom: 20px
+        &-item
+            margin-bottom: 20px
+        &-number
+            margin-right: 30px
+            flex-basis: 86px
+    .overflow
+        &-slider
+            &-item
+                margin-right: 32px
+            img
+                max-height: 200px
+    .why
+        padding-top: 100px
+        padding-bottom: 50px
+        &-row
+            margin-bottom: 50px
+            img
+                display: block
+                margin: auto
+                margin-bottom: 20px
+            &:nth-child(2n)
+                flex-direction: column-reverse
+                img
+                    margin-top: 20px
+        &-edge
+            flex-wrap: wrap
+            &-icon
+                margin-right: 0
+                margin-bottom: 18px
+                width: 100%
+                display: flex
+                justify-content: center
+    .section-subtitle
+        margin-bottom: 40px
+    .admission
+        padding: 50px 0
+        .section
+            &-title
+                text-align: center
+            &-subtitle
+                text-align: center
+        &-info
+            flex-wrap: wrap
+        &-img
+            margin-right: 0
+            margin-bottom: 30px
+            width: 100%
+            display: flex
+            justify-content: center
+        &-speciality
+            margin-right: 0
+            margin-bottom: 20px
+            width: 100%
+            max-width: 100%
+        &-price
+            position: static
+            width: 100%
+            &-date
+                margin-bottom: 20px
+        &-btn
+            bottom: 20px
+            margin: 0px 15px
+            width: calc( 100% - 30px )
+            text-align: center
+            svg
+                right: 50%
+                transform: translate(55px, -50%)
+            &.show
+                svg
+                    transform: translate(55px, -50%) rotate(180deg)
+        .accordion-panel
+            flex-wrap: wrap
+            &.show
+                margin-top: 10px
+            &-program
+                order: 1
+        &-mini
+            svg
+                margin-right: 15px
+            &-name
+                font-size: 21px
+            &-price
+                margin-right: 60px
+                font-size: 20px
+        &-panel
+            &-info
+                margin-bottom: 20px
+        &-accordion
+            position: relative
+            padding-bottom: 80px
+        
+    .stlive
+        padding: 50px 0
+        &-main
+            padding: 50px 60px 0
+    .why-work
+        padding: 50px 0
+        &-bottom
+            padding: 48px 45px
+            font-size: 22px
+    .career
+        padding: 50px 0
+        &-img
+            text-align: center
+            svg
+                right: 10px
+                bottom: -10px
+                width: 50px
+                height: 50px
+        .admission-btn
+            bottom: 0
+            width: 100%
+            margin: 0
+            margin-top: 20px
+        &-author
+            margin-bottom: 30px
+        &-icon
+            padding: 50px 0
+    .intensive
+        padding: 50px 0
+        &-course
+            padding: 40px 60px
+        &-info
+            width: 100%
+        &-form
+            width: 100%
+            .form
+                margin-top: 40px
+                max-width: 100%
+                &-policy
+                    margin-top: 17px
+                    margin-bottom: 20px
+    .educator
+        padding: 50px 0
+
+    .respect
+        padding: 50px 0
+        .slick-slide
+            margin: 0px 1px
+        &-slider
+            &-star
+                &-desc
+                    margin-top: 20px
+
+    .contact
+        padding-top: 0
+        .form 
+            .iti
+                margin-bottom: 20px
+
+
+
+@media screen and ( max-width: 768px )
+    
+    
+    .mob-none
+        display: none
+    .main, .why, .admission, .intensive-course, .respect, .contact-form
+        background-image: none
+
+    .why, .admission, .stlive, .why-work, .career, .intensive, .educator, .respect, .contact
+        padding: 40px 0
+    .header
+        &-call
+            right: 15px
+        &-menu
+            padding-top: 0
+            padding-bottom: 0
+            &-item
+                text-align: center
+                a
+                    margin: 0
+                    padding: 6px 0px
+                    width: 100%
+                    display: inline-block
+                    @include fontRegular()
+                    font-weight: 600
+            &-mob
+                margin-bottom: 3px
+                width: 20px
+                height: 14px
+        .logo
+            img
+                max-width: 130px
+    .overflow
+        &-slider
+            &-item
+                max-width: 254px
+    .features
+        padding-bottom: 0
+        &-text
+            @include fontRegular()
+            font-family: $SourceSansPro
+        &-number
+            margin-top: 0
+            min-width: 76px
+            font-size: 30px
+    .section
+        &-title
+            margin-bottom: 20px
+            @include sectionTitle()
+        &-subtitle
+            margin-bottom: 20px !important
+            @include fontRegular()
+    .why
+        &-row
+            margin-bottom: 20px
+            &:nth-child(2n) img
+                margin-top: 0
+        &-edge
+            margin-bottom: 20px
+            &-text
+                @include fontBig()
+        &-text
+            @include fontRegular()
+            font-family: $SourceSansPro
+    .admission
+        &-accordion
+            margin-bottom: 0
+            padding-right: 0
+            padding-left: 0
+            box-shadow: none
+        &-name
+            margin-bottom: 20px
+            font-size: 22px
+            line-height: 27px
+        &-speciality
+            &-title
+                margin-bottom: 20px
+                @include fontRegular()
+            &-name
+                padding: 6px 16px
+                margin-bottom: 12px
+                @include fontSmall()
+        &-price
+            &-title
+                margin-bottom: 5px
+                font-size: 22px
+                line-height: 27px
+            &-date
+                margin-bottom: 30px
+                @include fontRegular()
+        &-btn
+            margin: 0
+            width: 100%
+            @include fontRegular()
+        &-mini
+            margin-bottom: 0
+            padding-top: 10px
+            padding-bottom: 10px
+            border-bottom: 1px solid #B9BECF
+            border-radius: 0px
+            &-img
+                margin-right: 7px
+                svg
+                    margin-right: 0
+                    width: 29px
+                    height: 29px
+            &-name
+                padding-right: 40px
+                @include fontRegular()
+                font-weight: 500
+                color: #000
+            &-close
+                span
+                    top: 28px
+                    width: 30px
+            &-price
+                margin-right: 0
+                height: 0
+                font-size: 0
+            &-panel
+                padding-left: 0
+            .admission-panel-info
+                padding-right: 0
+                margin-bottom: 0
+                p
+                    margin-bottom: 20px
+                    @include fontRegular()
+        &-panel-program
+            &-hours
+                width: 100% !important
+        &-price
+            &-date
+                span
+                    display: inline-block
+
+    .stlive
+        &-main
+            margin-top: 0
+            margin-bottom: 0
+            padding: 0   
+        &-title
+            margin-bottom: 20px
+            @include sectionTitle()
+        &-text
+            margin-bottom: 20px
+            @include fontRegular()
+
+    .why
+        &-work
+            &-list
+                &::before
+                    left: 20px
+            &-item
+                &::before
+                    width: 40px
+                    height: 40px
+                    top: -7px
+            &-accordion
+                .accordion-show
+                    right: 0
+                    width: 100%
+                    align-items: flex-start
+                &-top
+                    width: 100%
+                &-panel
+                    padding-left: 0
+                    padding-right: 0
+                    margin: 0px -46px
+                    &__text
+                        position: relative
+                        background-color: #fff
+                &__name
+                    padding-left: 55px
+                    padding-right: 20px
+                    @include fontBig()
+                    font-weight: 500
+                &-info__top
+                    position: relative
+                    left: 45px
+                    width: calc( 100% - 80px )
+            &-bottom
+                padding: 23px 23px 17px  
+                @include fontSmall()
+                font-weight: 500
+                background-image: url('../img/live/bottom-m.jpg')
+    .career
+        &-desc
+            @include fontRegular()
+        &-author
+            @include fontRegular()
+        &-icon
+            padding: 28px 0
+            &-item
+                img
+                    max-height: 50px
+    .intensive
+        &-course
+            padding: 0
+            box-shadow: none
+        &-title
+            font-size: 28px
+            font-weight: 500
+            line-height: 36px
+            text-align: center
+        &-info
+            @include fontRegular()
+            font-family: $SourceSansPro
+            text-align: center
+        .form
+            .input
+                margin-bottom: 0
+                padding: 12px 25px
+                @include fontRegular()
+                font-family: $SourceSansPro
+            &-policy
+                margin-top: 30px
+            &-btn
+                padding: 13px 36px
+                @include fontRegular()
+                font-family: $SourceSansPro
+                text-align: left
+                &::before
+                    right: 36px
+    .educator
+        .section-subtitle
+            margin-bottom: 40px !important
+        &-img 
+            margin-bottom: 20px
+            img
+                width: 100%
+        &-ceo
+            margin-bottom: 20px
+        &-btn
+            padding: 13px 9px
+            width: 100%
+            @include fontRegular()
+            font-weight: 400
+            font-family: $SourceSansPro
+            
+    .respect
+        overflow: hidden
+        &-slider
+            padding-top: 40px
+        
+        .section
+            &-title, &-subtitle
+                text-align: left
+        &-icon
+            margin-bottom: 0
+            justify-content: space-between
+            &::after
+                display: none
+            &-item
+                padding: 24px 0px
+                flex-basis: 50%
+                border: none
+                img
+                    max-width: 120px
+                &:nth-child(odd)
+                    border-right: 1px solid #B9BECF          
+                &:nth-child(-n+4)
+                     border-bottom: 1px solid #B9BECF           
+        &-slider
+            &-more
+                margin-top: 40px
+                padding: 13px 0
+                width: 100%
+                border: 1px solid #B9BECF
+                border-radius: 10px
+                @include fontRegular()
+                color: $text-form
+                text-align: center
+            &-star
+                position: relative
+                max-height: 0%
+                &.show
+                    max-height: 100%
+                &-desc 
+                    min-height: 100px
+                    @include fontRegular()
+                    font-family: $SourceSansPro
+                    
+                &-name
+                    margin-bottom: 20px
+                    font-size: 22px
+                    line-height: 26px
+                    font-weight: 500
+                &-img
+                    margin-bottom: 20px
+                    img
+                        width: 100%
+                &-social
+                    position: absolute
+                    right: -200px
+                    top: 60px
+                    flex-direction: column
+                    transition: right 1s, easy-in-out
+                    &.show
+                        right: 5px
+                    &-more
+                        position: absolute
+                        top: 9px
+                        right: 9px
+                        
+                    a
+                        margin: 0
+                        margin-bottom: 10px
+                        padding: 18px
+                        display: flex
+                        border-radius: 10px
+                        background-color: #fff
+            .accordion-work.active 
+                svg
+                    transform: translate(55px, -50%) rotate(180deg)
+            .panel
+                transition:  max-height .2s, padding .2s, margin .2s, easy-in-out
+            .admission-btn
+                width: calc( 100% - 30px )
+                left: 15px
+                bottom: 0
+    .contact
+        &-form
+            padding: 0
+            box-shadow: none
+        &-title
+            margin-bottom: 30px
+            font-size: 28px
+            line-height: 30px
+            text-align: center
+        
+        .form 
+            .input, .dropdown
+                margin-bottom: 20px
+                padding: 12px 13px
+                @include fontRegular()
+                text-align: center
+            .dropdown
+                display: flex
+                align-items: center
+                text-align: left
+                max-height: 50px
+                .select
+                    @include fontRegular()
+                    
+            .iti .input
+                padding-left: 50px !important
+            .input:last-child
+                margin-bottom: 30px
+            &-policy
+                margin-bottom: 20px
+                @include fontSmall()
+            &-btn
+                padding: 13px 34px
+                @include fontRegular()
+                &::before
+                    right: 34px
+
+    .footer
+        padding-top: 40px
+        padding-bottom: 12px
+        &-top
+            padding: 20px 0
+        &-contact
+            padding-top: 30px
+        .logo
+            margin-bottom: 20px 
+        &-text
+            margin-bottom: 40px
+            @include fontRegular()
+        &-title
+            margin-bottom: 20px
+            font-size: 22px
+            span
+                margin-top: 10px
+                @include fontRegular()
+        &-phone
+            margin-bottom: 20px
+            font-size: 24px
+            span
+                font-size: 20px
+            &:last-child
+                margin-bottom: 20px
+                
+    .footer
+        .social-item
+            margin: 0px 14px
+            &:first-child
+                margin-left: 0
+            &:last-child
+                margin-right: 0
+
+    .modal
+        input#modal-phone
+            text-align: left
+        &-body
+            margin: 0px 15px
+            padding: 25px 16px  
+            background-image: none
+        &-title
+            margin-bottom: 30px
+            font-size: 28px
+            line-height: 36px
+            text-align: center
+        .form
+            .input
+                padding: 12px 15px
+                margin-bottom: 20px
+                @include fontRegular()
+                text-align: center
+                &:last-child
+                    margin-bottom: 30px
+            &-policy
+                margin-bottom: 20px
+                @include fontSmall()
+            &-btn
+                padding: 13px 39px
+                @include fontRegular()
+                text-align: left
+                &::before
+                    right: 39px
+        &-close
+            display: none
+                
+    .form
+        &-policy
+            @include fontSmall()
+            
